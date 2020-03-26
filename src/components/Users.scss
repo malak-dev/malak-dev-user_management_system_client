@@ -1,0 +1,28 @@
+.users{
+  text-align: center;
+   width: 60%;
+   margin: auto;
+  
+  table{
+    border:2px solid black;
+  
+    .head{
+      background-color:pink;
+    }
+  }
+  
+}
+
+.add {
+  margin-top: 10% !important;
+  width: 45%;
+  margin: auto;
+  button{
+    width: 20%;
+  }
+}
+select {
+  width: 35%;
+  margin: 2%;
+  margin-bottom: 8%;
+}
