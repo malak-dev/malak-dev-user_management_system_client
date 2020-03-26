@@ -18,7 +18,7 @@ export default function EditGroup(props) {
 
     <div className="add">
 
-      <h2>Edit group ingromation</h2>
+      <h2>Edit group infromation</h2>
       <br />
       <div className="form_elements" >
         <div class="form-group">
