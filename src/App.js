@@ -29,7 +29,7 @@ function App() {
 
   //get all the users
   function getUsers() {
-    return axios.get('http://localhost:3001/api/users')
+    return axios.get('https://user-mgmt-system-malak.herokuapp.com/api/users')
       .then(function (response) {
         setUsersInfo(response.data)
       })
@@ -41,7 +41,7 @@ function App() {
   //delete a specific user
   function deleteUser(id) {
 
-    axios.delete(`http://localhost:3001/api/users/${id}/delete`)
+    axios.delete(`https://user-mgmt-system-malak.herokuapp.com/api/users/${id}/delete`)
       .then((response) => {
         getUsers()
         getAllGroups()
@@ -61,7 +61,7 @@ function App() {
       group_id
     }
 
-    axios.post("http://localhost:3001/api/users/new", data)
+    axios.post("https://user-mgmt-system-malak.herokuapp.com/api/users/new", data)
       .then((response) => {
         getUsers();
         getAllGroups()
@@ -80,7 +80,7 @@ function App() {
       category
     }
 
-    axios.put(`http://localhost:3001/api/users/${id}/update`, data)
+    axios.put(`https://user-mgmt-system-malak.herokuapp.com/api/users/${id}/update`, data)
       .then(function (response) {
         getUsers();
       })
@@ -99,7 +99,7 @@ function App() {
 
   // get all the groups
   function getAllGroups() {
-    axios.get("http://localhost:3001/api/groups")
+    axios.get("https://user-mgmt-system-malak.herokuapp.com/api/groups")
       .then(function (response) {
         setGroupInfo(response.data)
       })
@@ -110,7 +110,7 @@ function App() {
 
   // delete a specific group
   function deleteGroup(id) {
-    axios.delete(`http://localhost:3001/api/groups/${id}/delete`)
+    axios.delete(`https://user-mgmt-system-malak.herokuapp.com/api/groups/${id}/delete`)
       .then(function (response) {
         getAllGroups()
         getUsers()
@@ -126,7 +126,7 @@ function App() {
       name
     }
 
-    axios.post("http://localhost:3001/api/groups/new", data)
+    axios.post("https://user-mgmt-system-malak.herokuapp.com/api/groups/new", data)
       .then((response) => {
         getAllGroups();
 
@@ -142,7 +142,7 @@ function App() {
       id
     }
 
-    axios.put(`http://localhost:3001/api/groups/${id}/update`, data)
+    axios.put(`https://user-mgmt-system-malak.herokuapp.com/api/groups/${id}/update`, data)
       .then(function (response) {
         getAllGroups();
       })
@@ -152,7 +152,7 @@ function App() {
   }
   // get specific user
   const getUser = (id) => {
-    axios.get(`http://localhost:3001/api/users/${id}`)
+    axios.get(`https://user-mgmt-system-malak.herokuapp.com/api/users/${id}`)
       .then(function (response) {
         setUser(response.data)
 
