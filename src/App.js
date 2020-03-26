@@ -189,7 +189,7 @@ function App() {
           <Route path="/editUser/:id" >
             <Logo />
             <br />
-            <EditUser groupInfo={groupInfo} editUser={editUser} />
+            <EditUser groupInfo={groupInfo} editUser={editUser} user={user}/>
           </Route>
           <Route path="/editGroup/:id" >
             <Logo />
